@@ -1,0 +1,47 @@
+/*
+MySQL Data Transfer
+Source Host: localhost
+Source Database: 用户名
+Target Host: localhost
+Target Database: 用户名
+Date: 2018/3/30 9:13:39
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for 消费表
+-- ----------------------------
+CREATE TABLE `消费表` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `购买货物` char(255) COLLATE utf8_bin DEFAULT NULL,
+  `货物价格` char(255) COLLATE utf8_bin DEFAULT NULL,
+  `购买数量` int(11) DEFAULT NULL,
+  `货物品牌` char(255) COLLATE utf8_bin DEFAULT NULL,
+  `月消费总额` float DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  CONSTRAINT `ID` FOREIGN KEY (`ID`) REFERENCES `用户表` (`N月消费表ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Table structure for 用户表
+-- ----------------------------
+CREATE TABLE `用户表` (
+  `用户ID` int(11) NOT NULL AUTO_INCREMENT,
+  `所属城市` char(255) COLLATE utf8_bin DEFAULT NULL,
+  `性别` char(255) COLLATE utf8_bin DEFAULT NULL,
+  `年龄` int(11) DEFAULT NULL,
+  `支付类型` char(255) COLLATE utf8_bin DEFAULT NULL,
+  `N月消费表ID` int(11) NOT NULL,
+  PRIMARY KEY (`用户ID`),
+  KEY `N月消费表ID` (`N月消费表ID`),
+  KEY `N月消费表ID_2` (`N月消费表ID`),
+  KEY `N月消费表ID_3` (`N月消费表ID`),
+  KEY `N月消费表ID_4` (`N月消费表ID`),
+  KEY `N月消费表ID_5` (`N月消费表ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records 
+-- ----------------------------
+INSERT INTO `消费表` VALUES ('1', '', null, null, null, null);
+INSERT INTO `用户表` VALUES ('0', null, null, null, null, '1');
