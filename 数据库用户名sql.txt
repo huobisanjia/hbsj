@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: 用户名
 Target Host: localhost
 Target Database: 用户名
-Date: 2018/3/30 
+Date:  2018/3/30 
 */
 
 SET FOREIGN_KEY_CHECKS=0;
