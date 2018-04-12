@@ -9,7 +9,7 @@ CREATE TABLE  `ski_db`.`user` (
   `ip` varchar(20) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `emailstatus` int(10) DEFAULT '0',
-  PRIMARY KEY (`qqnum`)
+  PRIMARY KEY (`qqnum` )
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
 
